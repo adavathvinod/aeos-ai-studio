@@ -11,7 +11,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailto = `mailto:hello@aeosfilms.com?subject=Project Inquiry from ${form.name}&body=${encodeURIComponent(
+    const mailto = `mailto:hello@jeefilms.com?subject=Project Inquiry from ${form.name}&body=${encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nCompany: ${form.company}\n\n${form.message}`
     )}`;
     window.location.href = mailto;

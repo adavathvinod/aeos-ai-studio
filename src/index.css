@@ -76,4 +76,34 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  @keyframes walker-traverse {
+    0% {
+      transform: translateX(-100vw) scale(0.6);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100vw) scale(0.6);
+      opacity: 0;
+    }
+  }
+
+  @keyframes walk-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  .hero-walker {
+    animation: walker-traverse 10s ease-in-out infinite, walk-bob 0.6s ease-in-out infinite;
+  }
 }
